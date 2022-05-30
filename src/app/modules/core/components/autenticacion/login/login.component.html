@@ -1,0 +1,63 @@
+<div class="limiter">
+
+
+     <div class="container-login100" style="background-image: url('../../../../../assets/images/bg-01.jpg');">
+        <div class="wrap-login100">
+            <form [formGroup]="formularioLogin" class="login100-form validate-form" >
+                <span class="login100-form-logo">   
+                    <i class="zmdi zmdi-landscape"></i>
+                </span>
+
+                <span class="login100-form-title p-b-34 p-t-27">
+                    Log in
+                </span>
+
+                 <!-- Nombre y Apellido  -->
+                 <!-- <div class="row">
+                    <mat-form-field appearance="fill"  class="col-md-6" >
+                        <mat-label>Nombre</mat-label>                    
+                        <input type="text" formControlName="nombre" [(ngModel)]="alumno.nombre" matInput [readonly]="soloLectura">        
+                        <mat-error *ngIf="formularioAlumno.controls['nombre'].errors?.['required']">El campo Nombre es requerido</mat-error>
+                        <mat-error *ngIf="formularioAlumno.controls['nombre'].errors?.['minlength']">El campo Nombre debe tener al menos 3 caracteres</mat-error>
+                    </mat-form-field>
+                </div>                -->
+            
+
+                <div data-validate = "Enter usuario">
+                    <mat-form-field appearance="fill" class="wrap-input100 validate-input" >
+                        <input matInput formControlName="usuario" class="input100" type="mail" name="usuario" placeholder="E-Mail" required>
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        <mat-error *ngIf="formularioLogin.controls['usuario'].errors?.['required']">El campo E-Mail es requerido</mat-error>
+                        <mat-error *ngIf="formularioLogin.controls['usuario'].errors?.['pattern']">El E-Mail no tiene el formato requerido</mat-error>
+                    </mat-form-field>                    
+                </div>
+
+                <div data-validate="Enter contrasena">
+                    <mat-form-field appearance="fill" class="wrap-input100 validate-input">
+                        <input matInput formControlName="contrasena" class="input100" type="password" name="contrasena" placeholder="Contraseña" required>
+                        <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                        <mat-error *ngIf="formularioLogin.controls['contrasena'].errors?.['required']">El campo Contraseña es requerido</mat-error>
+                </mat-form-field>
+                </div>
+
+                <!-- <div class="contact100-form-checkbox">
+                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                    <label class="label-checkbox100" for="ckb1">
+                        Remember me
+                    </label>
+                </div> -->
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit" (click)="login()">Login</button>
+                </div>
+
+                <!-- <div class="text-center p-t-90">
+                    <a class="txt1" href="#">
+                        Forgot Password?
+                    </a> 
+                </div>-->
+            </form>
+        </div>
+    </div>
+</div>
+

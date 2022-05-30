@@ -1,0 +1,11 @@
+------   Credenciales  -------
+
+Administrador:
+	e-mai: pabloSilva@mail.com
+	password: asd
+	
+usuario:
+	e-mai: Zachery32@hotmail.com
+	password: 123
+
+	
